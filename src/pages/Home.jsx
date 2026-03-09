@@ -44,7 +44,7 @@ const Home = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-6xl lg:text-8xl font-black text-slate-900 leading-[1.1] tracking-tighter"
+                            className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.1] tracking-tighter text-balance"
                         >
                             {t('hero_h1_line1')} <span className="text-gradient">{t('hero_h1_word1')}</span>.<br />
                             {t('hero_h1_line2')} <span className="text-emerald-500">{t('hero_h1_word2')}</span>.<br />
@@ -111,8 +111,8 @@ const Home = () => {
                                 className="absolute w-full h-full object-cover z-0 rounded-[3rem]"
                             />
 
-                            {/* Floating UI Elements inside Hero */}
-                            <div className="absolute top-10 left-[-20px] glass-card p-4 rounded-2xl flex items-center gap-3 shadow-premium animate-bounce z-10" style={{ animationDuration: '3s' }}>
+                            {/* Floating UI Elements inside Hero - Hidden on Mobile */}
+                            <div className="hidden lg:flex absolute top-10 left-[-20px] glass-card p-4 rounded-2xl items-center gap-3 shadow-premium animate-bounce z-10" style={{ animationDuration: '3s' }}>
                                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
                                     <DollarSign size={20} />
                                 </div>
@@ -122,7 +122,7 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="absolute bottom-20 right-[-30px] glass-card p-4 rounded-2xl flex items-center gap-3 shadow-premium animate-bounce z-10" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                            <div className="hidden lg:flex absolute bottom-20 right-[-30px] glass-card p-4 rounded-2xl items-center gap-3 shadow-premium animate-bounce z-10" style={{ animationDuration: '4s', animationDelay: '1s' }}>
                                 <div className="w-10 h-10 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
                                     <CheckCircle size={20} />
                                 </div>
@@ -260,14 +260,14 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {topWorkers.map((worker, i) => (
-                            <div key={worker.id} className="glass-panel p-8 rounded-3xl text-center group hover:-translate-y-2 transition-transform duration-300">
-                                <div className="w-20 h-20 mx-auto rounded-2xl mb-4 overflow-hidden border-2 border-slate-700 group-hover:border-cyan-400 transition-colors">
+                            <div key={worker.id} className="glass-panel p-6 sm:p-8 rounded-3xl text-center group hover:-translate-y-2 transition-transform duration-300">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl mb-4 overflow-hidden border-2 border-slate-700 group-hover:border-cyan-400 transition-colors">
                                     <img src={`https://i.pravatar.cc/150?img=${i + 30}`} alt={worker.name} className="w-full h-full object-cover" />
                                 </div>
-                                <h4 className="text-lg font-black mb-1">{worker.name}</h4>
-                                <p className="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-4">{worker.title}</p>
+                                <h4 className="text-base sm:text-lg font-black mb-1">{worker.name}</h4>
+                                <p className="text-[10px] sm:text-xs font-bold text-cyan-400 uppercase tracking-widest mb-4">{worker.title}</p>
 
-                                <div className="flex justify-center gap-4 text-sm font-medium text-slate-400 pt-4 border-t border-white/10">
+                                <div className="flex justify-center gap-4 text-xs sm:text-sm font-medium text-slate-400 pt-4 border-t border-white/10">
                                     <div className="text-center">
                                         <p className="text-[10px] uppercase">{t('workers_jobs')}</p>
                                         <p className="font-black text-white">{worker.jobsDone}</p>
@@ -350,14 +350,14 @@ const Home = () => {
                 <div className="container-custom relative z-10">
                     <div className="glass-card bg-white p-12 lg:p-20 rounded-[3rem] shadow-premium flex flex-col lg:flex-row gap-16 items-center border border-slate-100">
                         <div className="flex-1 space-y-8 text-center lg:text-left">
-                            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
                                 {t('support_title')}
                             </h2>
-                            <p className="text-lg text-slate-500 font-medium leading-relaxed">
+                            <p className="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">
                                 {t('support_subtitle')}
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 pt-4 text-left">
                                 <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100">
                                     <div className="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center shrink-0">
                                         <Mail size={24} />

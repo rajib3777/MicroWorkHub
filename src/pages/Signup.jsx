@@ -21,7 +21,7 @@ const Signup = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center relative overflow-hidden pt-20 pb-12">
+        <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center relative overflow-hidden pt-28 pb-12 lg:pt-20">
             {/* Background Effects */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-[10%] right-[-10%] w-[40%] h-[40%] bg-emerald-200/40 rounded-full blur-[120px] animate-blob"></div>
@@ -63,9 +63,9 @@ const Signup = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="w-full max-w-md"
                 >
-                    <div className="glass-card p-8 sm:p-10 rounded-[2.5rem] shadow-premium bg-white/90">
+                    <div className="glass-card p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-premium bg-white/90">
                         <div className="text-center mb-8">
-                            <h2 className="text-2xl font-black text-slate-900 mb-2">{t('signup_form_title')}</h2>
+                            <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">{t('signup_form_title')}</h2>
                             <p className="text-slate-500 font-medium text-sm">{t('signup_form_subtitle')}</p>
                         </div>
 
@@ -74,7 +74,7 @@ const Signup = () => {
                             <button
                                 type="button"
                                 onClick={() => setRole('seeker')}
-                                className={`flex-1 py-3 text-sm font-black rounded-xl transition-all ${role === 'seeker' ? 'bg-white text-emerald-600 shadow-md' : 'text-slate-500 hover:text-slate-700'
+                                className={`flex-1 py-2.5 sm:py-3 text-[10px] sm:text-sm font-black rounded-xl transition-all ${role === 'seeker' ? 'bg-white text-emerald-600 shadow-md' : 'text-slate-500 hover:text-slate-700'
                                     }`}
                             >
                                 {t('signup_role_worker')}
@@ -82,7 +82,7 @@ const Signup = () => {
                             <button
                                 type="button"
                                 onClick={() => setRole('poster')}
-                                className={`flex-1 py-3 text-sm font-black rounded-xl transition-all ${role === 'poster' ? 'bg-white text-brand-600 shadow-md' : 'text-slate-500 hover:text-slate-700'
+                                className={`flex-1 py-2.5 sm:py-3 text-[10px] sm:text-sm font-black rounded-xl transition-all ${role === 'poster' ? 'bg-white text-brand-600 shadow-md' : 'text-slate-500 hover:text-slate-700'
                                     }`}
                             >
                                 {t('signup_role_employer')}

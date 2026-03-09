@@ -22,7 +22,7 @@ const AboutUs = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-black tracking-tight"
+                        className="text-4xl md:text-7xl font-black tracking-tight"
                     >
                         {t('about_title')}
                     </motion.h1>
@@ -30,7 +30,7 @@ const AboutUs = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl md:text-2xl text-cyan-50 font-medium max-w-3xl mx-auto leading-relaxed"
+                        className="text-lg md:text-2xl text-cyan-50 font-medium max-w-3xl mx-auto leading-relaxed"
                     >
                         {t('about_subtitle')}
                     </motion.p>
@@ -78,17 +78,17 @@ const AboutUs = () => {
                     <div className="bg-gradient-to-r from-brand-600 to-cyan-500 rounded-[3rem] p-12 text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay"></div>
                         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-white/20 divide-y md:divide-y-0 md:divide-x">
-                            <div className="p-4">
-                                <h3 className="text-5xl font-black mb-2">45K+</h3>
-                                <p className="text-cyan-50 font-bold uppercase tracking-widest">{t('about_stats_users')}</p>
+                            <div className="py-6 md:p-4">
+                                <h3 className="text-4xl md:text-5xl font-black mb-2">45K+</h3>
+                                <p className="text-cyan-50 text-xs md:text-sm font-bold uppercase tracking-widest">{t('about_stats_users')}</p>
                             </div>
-                            <div className="p-4">
-                                <h3 className="text-5xl font-black mb-2">120K+</h3>
-                                <p className="text-cyan-50 font-bold uppercase tracking-widest">{t('about_stats_jobs')}</p>
+                            <div className="py-6 md:p-4">
+                                <h3 className="text-4xl md:text-5xl font-black mb-2">120K+</h3>
+                                <p className="text-cyan-50 text-xs md:text-sm font-bold uppercase tracking-widest">{t('about_stats_jobs')}</p>
                             </div>
-                            <div className="p-4">
-                                <h3 className="text-5xl font-black mb-2">৳ 15M+</h3>
-                                <p className="text-cyan-50 font-bold uppercase tracking-widest">{t('about_stats_paid')}</p>
+                            <div className="py-6 md:p-4">
+                                <h3 className="text-4xl md:text-5xl font-black mb-2">৳ 15M+</h3>
+                                <p className="text-cyan-50 text-xs md:text-sm font-bold uppercase tracking-widest">{t('about_stats_paid')}</p>
                             </div>
                         </div>
                     </div>

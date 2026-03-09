@@ -18,9 +18,9 @@ const FindJobs = () => {
         <div className="pt-32 pb-20 min-h-screen bg-[#f8fafc]">
             <div className="container-custom">
                 {/* Header */}
-                <div className="mb-12 space-y-4">
-                    <h1 className="text-4xl lg:text-5xl font-black text-slate-900">Find <span className="text-gradient">Micro Jobs</span>.</h1>
-                    <p className="text-lg text-slate-500 font-medium">Browse through hundreds of tasks. Complete them and earn money instantly.</p>
+                <div className="mb-12 space-y-4 text-center sm:text-left">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">Find <span className="text-gradient">Micro Jobs</span>.</h1>
+                    <p className="text-base sm:text-lg text-slate-500 font-medium">Browse through hundreds of tasks. Complete them and earn money instantly.</p>
                 </div>
 
                 {/* Filters */}
@@ -57,16 +57,16 @@ const FindJobs = () => {
                             whileHover={{ y: -5 }}
                             className="glass-card bg-white p-8 rounded-3xl hover:shadow-premium-hover transition-all group flex flex-col h-full border border-slate-100"
                         >
-                            <div className="flex justify-between items-start mb-6">
-                                <div className="bg-brand-50 text-brand-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            <div className="flex justify-between items-start mb-6 gap-2">
+                                <div className="bg-brand-50 text-brand-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest truncate">
                                     {job.category}
                                 </div>
-                                <div className="flex items-center gap-1 text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                                <div className="flex items-center gap-1 text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full shrink-0">
                                     <DollarSign size={14} />
-                                    <span className="font-black">{job.price}</span>
+                                    <span className="font-black text-sm">{job.price}</span>
                                 </div>
                             </div>
-                            <h4 className="text-xl font-black text-slate-900 mb-2 leading-tight">{job.title}</h4>
+                            <h4 className="text-lg sm:text-xl font-black text-slate-900 mb-2 leading-tight">{job.title}</h4>
                             <p className="text-sm text-slate-500 mb-6 line-clamp-2 flex-grow">{job.description}</p>
 
                             <div className="pt-6 border-t border-slate-100 space-y-4">
